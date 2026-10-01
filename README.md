@@ -1,18 +1,10 @@
-# 旅游产品 v0.3 开发版
+# 旅途 v0.3 开发版
 
-手机优先的旅行规划 Web。按 v0.3 PRD 实现真实 AI 的可配置接入层：目的地发现 → 比较 → 地点查询 → 逐日计划 → 修改提案 → 用户确认保存。暂缓正式命名。
+手机优先的旅行规划 Web。按 v0.3 PRD 实现真实 AI 的可配置接入层：目的地发现 → 比较 → 地点查询 → 逐日计划 → 修改提案 → 用户确认保存。
 
 ## 界面预览
 
 ![雾蓝＋冷白旅游产品](artifacts/mist-blue-preview.png)
-
-## 当前状态
-
-- 前端和后端已接线；有明确标识的交互示例。
-- 尚未提供模型／高德密钥，因此**未通过真实模型和外部资料端到端验收**，也未发布 HTTPS 服务。
-- 无配置时返回 503，页面显示服务待配置，不使用样例假冒 AI 结果。
-- 默认地点供应商为高德中国大陆服务；全球覆盖尚未实现。
-- 图像是 Unsplash 旅行氛围图，不声称为对应城市实拍。底图为 OSM，第三方资源失败会提示。
 
 ## 本地启动
 
@@ -98,21 +90,6 @@ docker run --env-file .env -e HOST=0.0.0.0 -p 17887:17887 -v travel-data:/app/da
 ```
 
 Dockerfile 未在当前环境实际构建。上线前配置 HTTPS 反向代理、APP_ORIGIN、COOKIE_SECURE=true、数据库持久化备份、资源访问策略与供应商额度。单实例部署只运行一个进程；多实例前需要共享数据库和作业队列。此文件提供部署准备，不代表已上线。
-
-## UI 参考与接口资料
-
-- Mindtrip Inspiration（实际浏览）：https://mindtrip.ai/inspiration 。参考发现页层级与图片卡片。
-- Wanderlog（实际浏览公开规划页）：https://wanderlog.com/plan-a-trip 。参考目的地入口、行程地图的产品组织；未登录其编辑器。
-- OpenAI Function Calling：https://developers.openai.com/api/docs/guides/function-calling
-- 高德 POI：https://lbs.amap.com/api/webservice/guide/api-advanced/search
-- 高德地理编码：https://lbs.amap.com/api/webservice/guide/api/georegeo
-
-本产品的视觉、代码和文案独立实现，没有复制竞品商标或页面素材。
-
-
-## 2026-09-26 摄影风界面
-
-按用户确认的 Fora 摄影质感、Mindtrip 探索网格、Tripsy 行程卡片独立实现。增加主题筛选和本地收藏，保留双入口与编辑。截图和验收见 artifacts/摄影风界面验收-20260926.md。图片为旅行氛围，依赖 Unsplash；真实 AI 待配置。
 
 
 ## GitHub 项目归档
