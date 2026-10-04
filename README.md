@@ -84,6 +84,8 @@ tests 使用隔离的测试模型与资料，不调用收费服务，不进入�
 
 ## 部署准备
 
+线上部署设置与当前进度见 [DEPLOYMENT.md](DEPLOYMENT.md)。
+
 ```sh
 docker build -t travel-product .
 docker run --env-file .env -e HOST=0.0.0.0 -p 17887:17887 -v travel-data:/app/data travel-product
