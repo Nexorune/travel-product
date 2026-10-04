@@ -22,5 +22,6 @@
 - 正在核查 Railway，Ego 浏览器 TaskSpace 63（旅游产品上线部署）停在登录页；平台尚未登录，不存在已确认的线上地址。
 - 现有架构需 Node.js 24、一个实例和持久化卷 /app/data；HTTPS 使用 COOKIE_SECURE=true 和实际 APP_ORIGIN。模型与高德密钥仍待配置。
 - Docker 健康检查已改为跟随平台 PORT，部署设置记录在 DEPLOYMENT.md。当前机器没有 Docker，尚未执行镜像构建；平台构建及线上验收待登录后继续。
-- 不把静态首页发布当作完整产品上线，不擅自订阅付费套餐。GitHub 源码保持私有。
+- 不把静态首页发布当作完整产品上线，不擅自订阅付费套餐。
 - 本轮验证：生产构建通过；使用随机端口启动隔离的内存数据库服务，执行 Dockerfile 中的实际健康检查表达式，退出码 0；health.status=ok、ready=false。
+- GitHub 推送前发现远端新增 README 修改，已整合并保留“旅途”名称及说明删改。推送提示仓库移至 https://github.com/Nexorune/travel-product ，已通过 GitHub API 核实并更新 origin；当前 isPrivate=false，与最初选择私有不同，本轮未改变仓库可见性。

@@ -2,7 +2,7 @@
 
 ## 当前进度（2026-10-05）
 
-用户要求部署整个旅游产品。暂选 Railway 作为现有 Node.js 24 + SQLite 架构的托管候选；平台尚未登录，未创建线上资源，未产生可访问的线上地址。GitHub 源码仓库保持私有。
+用户要求部署整个旅游产品。暂选 Railway 作为现有 Node.js 24 + SQLite 架构的托管候选；平台尚未登录，未创建线上资源，未产生可访问的线上地址。GitHub 仓库已转移至 Nexorune/travel-product；2026-10-05 API 核查当前为公开，与最初选择私有的记录不同，本轮未修改可见性。
 
 ## 部署设置
 
@@ -10,7 +10,7 @@
 
 | 配置 | 值 |
 | --- | --- |
-| 仓库 | nexorithium/travel-product |
+| 仓库 | Nexorune/travel-product |
 | 分支 | main |
 | HOST | 0.0.0.0 |
 | DATABASE_PATH | /app/data/travel.sqlite |
@@ -44,4 +44,3 @@ PORT 由平台设置；Docker 健康检查跟随该端口。Railway 的卷可能
 - https://docs.railway.com/pricing/free-trial
 - https://docs.railway.com/pricing/plans
 - https://docs.railway.com/volumes/reference
-
