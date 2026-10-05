@@ -91,7 +91,7 @@ docker build -t travel-product .
 docker run --env-file .env -e HOST=0.0.0.0 -p 17887:17887 -v travel-data:/app/data travel-product
 ```
 
-Dockerfile 未在当前环境实际构建。上线前配置 HTTPS 反向代理、APP_ORIGIN、COOKIE_SECURE=true、数据库持久化备份、资源访问策略与供应商额度。单实例部署只运行一个进程；多实例前需要共享数据库和作业队列。此文件提供部署准备，不代表已上线。
+2026-10-05 已在 Railway 实际构建镜像并部署网页、后台与持久化数据库：[线上访问](https://travel-product-production.up.railway.app)。HTTPS、Secure cookie、来源检查和跨部署数据保留已验证；真实模型和高德服务仍待配置，自动备份尚未设置。当前使用试用额度。单实例部署只运行一个进程；多实例前需要共享数据库和作业队列。详细标识、限制和更新方式见 DEPLOYMENT.md。
 
 
 ## GitHub 项目归档
